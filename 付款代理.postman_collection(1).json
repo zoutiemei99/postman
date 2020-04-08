@@ -1,0 +1,2384 @@
+{
+	"info": {
+		"_postman_id": "d541d618-d5ca-4f8e-ace2-50b59d438d67",
+		"name": "付款代理",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "前台",
+			"item": [
+				{
+					"name": "供应商管理",
+					"item": [
+						{
+							"name": "保存(保理)推荐供应商",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "kZtwBPb64NxF_GuN0lBBgXjTo-xlsUbKvXisAsofOeg",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json;charset=UTF-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"2\",\n    \"memberList\": [\n        {\n            \"bkid\": \"05\",\n            \"hzdm\": \"003140\",\n            \"hzname\": \"杭州庆升暖通设备有限公司\",\n            \"hzcreditCode\": \"9133010234177256XR\",\n            \"lxr\": \"联系人\",\n            \"lxtel\": \"17306439638\",\n            \"years\": \"2021\",\n            \"remark\": \"备注\"\n        },\n         {\n            \"bkid\": \"05\",\n            \"hzdm\": \"003141\",\n            \"hzname\": \"杭州慧康食品有限公司\",\n            \"hzcreditCode\": \"91330104MA2AYGEC6N\",\n            \"lxr\": \"联系人\",\n            \"lxtel\": \"17306439638\",\n            \"years\": \"2021\",\n            \"remark\": \"备注\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/member",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"member"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "保存(保理)推荐供应商",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "HiaxQ_mkQIj5AoSWscSmbfa7-y01AHNngmZaPiLZcYM",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json;charset=UTF-8",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"type\": \"2\",\n    \"memberList\": [\n        {\n            \"bkid\": \"05\",\n            \"shopno\": \"S00000\",\n            \"hzdm\": \"003135\",\n            \"hzname\": \"杭州义江时装有限公司\",\n            \"hzcreditCode\": \"91330102MA2B2U8L69\",\n            \"lxr\": \"联系人\",\n            \"lxtel\": \"17306439638\",\n            \"years\": \"2021\",\n            \"remark\": \"备注\"\n        },\n         {\n            \"bkid\": \"05\",\n            \"shopno\": \"S00000\",\n            \"hzdm\": \"003137\",\n            \"hzname\": \"杭州安昀贸易有限公司\",\n            \"hzcreditCode\": \"91330109396163606G\",\n            \"lxr\": \"联系人\",\n            \"lxtel\": \"17306439638\",\n            \"years\": \"2021\",\n            \"remark\": \"备注\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/member",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"member"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "28"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 05 Mar 2020 09:28:24 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "分页查询(保理)推荐供应商列表",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "MJFqSUoO7QhTHSKStAaWa3CGOzfwUYHFP1e_LivMlSE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/member?page=1&size=10",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"member"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "hzdm",
+											"value": "003034",
+											"disabled": true
+										},
+										{
+											"key": "hzname",
+											"value": "推荐供应商",
+											"disabled": true
+										},
+										{
+											"key": "bkid",
+											"value": "01",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "WAIT_SEND",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "分页查询(保理)推荐供应商列表",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "HiaxQ_mkQIj5AoSWscSmbfa7-y01AHNngmZaPiLZcYM",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/member?page=1&size=10",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"member"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "hzdm",
+													"value": "003034",
+													"disabled": true
+												},
+												{
+													"key": "hzname",
+													"value": "推荐供应商",
+													"disabled": true
+												},
+												{
+													"key": "bkid",
+													"value": "01",
+													"disabled": true
+												},
+												{
+													"key": "status",
+													"value": "WAIT_SEND",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2510"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 05 Mar 2020 09:38:31 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"bkid\": \"05\",\n                    \"createDate\": \"2020-03-05 17:27:58\",\n                    \"createDepid\": \"001032A0\",\n                    \"createDepname\": \"凯文贸易卖家公司\",\n                    \"createUserid\": \"kaiwen11\",\n                    \"createUsername\": \"凯文贸易卖家公司管理员1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"91330109396163606G\",\n                    \"hzdm\": \"003137\",\n                    \"hzname\": \"杭州安昀贸易有限公司\",\n                    \"lxr\": \"联系人\",\n                    \"lxtel\": \"17306439638\",\n                    \"mbname\": \"凯文贸易卖家11\",\n                    \"pkid\": \"1235497270673096704\",\n                    \"remark\": \"备注\",\n                    \"roles\": \"UP_CUSTOMER\",\n                    \"shopno\": \"S00000\",\n                    \"status\": \"HAS_SEND\",\n                    \"timemd5\": \"c32d65ab42254817bed77181b23612f8\",\n                    \"years\": \"2021\"\n                },\n                {\n                    \"bkid\": \"05\",\n                    \"createDate\": \"2020-03-05 17:27:57\",\n                    \"createDepid\": \"001032A0\",\n                    \"createDepname\": \"凯文贸易卖家公司\",\n                    \"createUserid\": \"kaiwen11\",\n                    \"createUsername\": \"凯文贸易卖家公司管理员1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"91330102MA2B2U8L69\",\n                    \"hzdm\": \"003135\",\n                    \"hzname\": \"杭州义江时装有限公司\",\n                    \"lxr\": \"联系人\",\n                    \"lxtel\": \"17306439638\",\n                    \"mbname\": \"凯文贸易卖家11\",\n                    \"pkid\": \"1235497270320775168\",\n                    \"remark\": \"备注\",\n                    \"roles\": \"UP_CUSTOMER\",\n                    \"shopno\": \"S00000\",\n                    \"status\": \"HAS_SEND\",\n                    \"timemd5\": \"d48185e42ffc4a72b3c9afb6bf76407f\",\n                    \"years\": \"2021\"\n                },\n                {\n                    \"bkid\": \"05\",\n                    \"createDate\": \"2020-03-03 18:06:47\",\n                    \"createDepid\": \"001032A0\",\n                    \"createDepname\": \"凯文贸易卖家公司\",\n                    \"createUserid\": \"kaiwen11\",\n                    \"createUsername\": \"凯文贸易卖家公司管理员1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"91330102MA2B2WU42F\",\n                    \"hzdm\": \"003038\",\n                    \"hzname\": \"推荐供应商公司5\",\n                    \"lxr\": \"联系人3\",\n                    \"lxtel\": \"17306439638\",\n                    \"mbname\": \"凯文贸易卖家11\",\n                    \"modifyDate\": \"2020-03-03 19:42:13\",\n                    \"modifyUserid\": \"kaiwen11\",\n                    \"modifyUsername\": \"凯文贸易卖家公司管理员1\",\n                    \"pkid\": \"1234782253099122688\",\n                    \"remark\": \"备注3\",\n                    \"roles\": \"UP_CUSTOMER\",\n                    \"shopno\": \"S00000\",\n                    \"status\": \"HAS_SEND\",\n                    \"timemd5\": \"c8e19177beb74975972d6bffe4186827\",\n                    \"years\": \"2021\"\n                },\n                {\n                    \"bkid\": \"05\",\n                    \"createDate\": \"2020-03-03 17:06:21\",\n                    \"createDepid\": \"001032A0\",\n                    \"createDepname\": \"凯文贸易卖家公司\",\n                    \"createUserid\": \"kaiwen11\",\n                    \"createUsername\": \"凯文贸易卖家公司管理员1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"911310827965850580\",\n                    \"hzdm\": \"003037\",\n                    \"hzname\": \"推荐供应商公司5\",\n                    \"lxr\": \"联系人3\",\n                    \"lxtel\": \"17306439638\",\n                    \"mbname\": \"凯文贸易卖家11\",\n                    \"pkid\": \"1234767023556231168\",\n                    \"remark\": \"备注3\",\n                    \"roles\": \"UP_CUSTOMER\",\n                    \"shopno\": \"S00000\",\n                    \"status\": \"HAS_SEND\",\n                    \"timemd5\": \"0ec76e0f3f604aafa8ebc5f57c82a57b\",\n                    \"years\": \"2021\"\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 4,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "编辑(保理)推荐供应商",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "fP2VAxn0mDo40oO3Q8k9mUAKOkEEswnE2r0uO1MaQUA"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json;charset=UTF-8"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"bkid\":\"01\",\n\t\"shopno\":\"S00000\",\n\t\"hzdm\":\"003139\",\n\t\"hzname\":\"杭州华东下沙家居商城馨阳家具商行\",\n\t\"hzCreditCode\":\"911310827965850580\",\n\t\"lxr\":\"联系人1111\",\n\t\"lxtel\":\"17306439638\",\n\t\"years\":\"2021\",\n\t\"remark\":\"备注111\",\n\t\"timemd5\":\"fb72aee7dd894d4abb13b1ac448e091b\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/member/1235563934592745472/update",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"member",
+										"1235563934592745472",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "编辑(保理)推荐供应商",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "fP2VAxn0mDo40oO3Q8k9mUAKOkEEswnE2r0uO1MaQUA"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json;charset=UTF-8"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"bkid\":\"01\",\n\t\"shopno\":\"S00000\",\n\t\"hzdm\":\"003139\",\n\t\"hzname\":\"杭州华东下沙家居商城馨阳家具商行\",\n\t\"hzCreditCode\":\"911310827965850580\",\n\t\"lxr\":\"联系人1111\",\n\t\"lxtel\":\"17306439638\",\n\t\"years\":\"2021\",\n\t\"remark\":\"备注111\",\n\t\"timemd5\":\"fb72aee7dd894d4abb13b1ac448e091b\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/member/1235563934592745472/update",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"member",
+												"1235563934592745472",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "28"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 06 Mar 2020 05:38:46 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "推送(保理)推荐供应商",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "1TrvK92V6YtHAewHi_wZ5GIoel3WQxKvPpLIYeskaOU"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json;charset=UTF-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"memberList\": [\n        {\n            \"pkid\": \"1234767023556231168\",\n            \"timemd5\": \"c8bfe4dedebc40df98eabe6b1b078954\"\n        },\n         {\n            \"pkid\": \"1234782253099122688\",\n            \"timemd5\": \"c8e19177beb74975972d6bffe4186827\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/member/push",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"member",
+										"push"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "推送(保理)推荐供应商",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "1TrvK92V6YtHAewHi_wZ5GIoel3WQxKvPpLIYeskaOU"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json;charset=UTF-8",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"memberList\": [\n        {\n            \"pkid\": \"1234767023556231168\",\n            \"timemd5\": \"c8bfe4dedebc40df98eabe6b1b078954\"\n        },\n         {\n            \"pkid\": \"1234782253099122688\",\n            \"timemd5\": \"c8e19177beb74975972d6bffe4186827\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/member/push",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"member",
+												"push"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "28"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 05 Mar 2020 12:15:19 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "导出(保理)推荐供应商列表",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "GbRMr0IdjzsqSSCm1M980dgF0HA36BNZxgAjMFTvNPM"
+									}
+								],
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/member/export?hzdm=003034&hzname=推荐供应商&bkid=01",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"member",
+										"export"
+									],
+									"query": [
+										{
+											"key": "hzdm",
+											"value": "003034"
+										},
+										{
+											"key": "hzname",
+											"value": "推荐供应商"
+										},
+										{
+											"key": "bkid",
+											"value": "01"
+										},
+										{
+											"key": "status",
+											"value": "WAIT_SEND",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "导出(保理)推荐供应商列表",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "GbRMr0IdjzsqSSCm1M980dgF0HA36BNZxgAjMFTvNPM"
+											}
+										],
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/member/export?hzdm=003034&hzname=推荐供应商&bkid=01",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"member",
+												"export"
+											],
+											"query": [
+												{
+													"key": "hzdm",
+													"value": "003034"
+												},
+												{
+													"key": "hzname",
+													"value": "推荐供应商"
+												},
+												{
+													"key": "bkid",
+													"value": "01"
+												},
+												{
+													"key": "status",
+													"value": "WAIT_SEND",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "raw",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment;filename=ä¾åºååè¡¨.xlsx"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.ms-excel;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 28 Feb 2020 10:45:07 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0000\u0000_rels/.rels���j�0\f�_���8�`�Q��2�m��\u00014[ILb��ږ���.[K\n\u001b�($}�\u0007�v?�I�Q.���uӂ�h���\u001bx>=��@\u0015��p�H\u0006\"�~�}�\t�n����*\"\u0016\u0003�H�׺؁\u0002��\u0013���8\u0007�Z�^'�#��7m{��O\u0006�3��\u0019�G�\u0006u�ܓ\u0018�'��y|a\u001e�����D�\t��\u000el_\u0003EYȾ�\u0000���vql\u001f3�ML�eh\u0016���*�\u0004��\\3�Y0���oJ׏�\u0003\t:\u0014��^\b�\u001f�}\u0002PK\u0007\b��z��\u0000\u0000\u0000I\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0013\u0000\u0000\u0000[Content_Types].xml�S�n�0\u0010����*6�PU\u0015�C\u001f�\u0016��\u0003\\{�X�%����]\u00078�R�\nq�cfgfW�d�q�ZCB\u0013|��|�*�*h㻆},^�{Va�^K\u001b<4�\u00076�N\u0016�\bXQ�ǆ�9�\u0007!P��$�\u0010�\u0013҆�d�c�D�j);\u0010��ѝP�g��E�M'O�ʕ����H7L�h���R���G��^�'�\u0003\u0007{\u0013�\b�zސʮ\u001bB��3\u001c�\u000b˙��h.�h�W�жF�\u000ej娄CQՠ똈���}ιL�U:\u0012\u0014D�\u0013����%އ����,�B���[�\t��\u001e ;˱�\t�{N��~��X�p�\u001cykOL�\u0004\u0018�kN�V��ܿBZ~����q\u0018��\u000f �a\u0019\u001fr��{O�\u0001PK\u0007\bz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0000docProps/app.xmlM��\n�0\u0010D��\u0010ro�z\u0010�4� �'{�\u000f\b��\u0006�MHV�盓z�\u0019��T��E�1e\u0017�����\u0002Ɇ�ѳ����:�No7jH!bb�Y�\u0007�V���\u0004�����T�)$o���0M��9ؗGb�7�\u0001pe�\u0011�*~�R�>��Y�EB��\u0014�\u0018nW\u0005������\u0000PK\u0007\b6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0011\u0000\u0000\u0000docProps/core.xmlm�]K�0\u0014��J�}{�Ne��C���8p��.$Ƕ�|�D;��i�\u0015Ի$�s\u001eN�js�\u0003yG\u001fzkjZ�\u00124Ҫ޴5}�o�5%!\n��`\r��X�i*鸴\u001ew�:���@��\u0004.]M�\u0018\u001d\u0007\b�C-B�\b��\u0017뵈��[pB��\u0016�d�\u00024F�D\u00140\t3�\u0018�I��to~�\u0005J\u0002\u000e���\u0000E^�\u000f\u001b������,�1�\u000b5�c>�f.mT����a^>���u���Nj.=���$\u0001�\u001f.5�<����[ڔ�d\u0019+�r�/\u0018?;�|����$�:[�\\�B:$����[�+�Ss�\tPK\u0007\b�_I-\u0005\u0001\u0000\u0000�\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000xl/sharedStrings.xml=�A\n�0\u0010\u0000�\b{��\u001eD�i\u000f�/�\u0007�tm\u0002�&f7�����0Ì�7mꃕc&\u000b���B�y��Zx>�\u000b��~72��X�I��nx�s�\u0010[\b\"�5����\u000bR7�\\���u�\\*��\u0003��M��9��\"��~PK\u0007\bh���y\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\r\u0000\u0000\u0000xl/styles.xml���n� \u0010��J}\u0007���d���&C%W��J]�9ۨpX@\"�O_0N�L\u001d:����\u001f���n4���ye���UA\t`c�®�\u001f��iKw���aҰ�\u0001\u0002�\u000e�\u0015�C\u0018^\u0018�M\u000fF��\u001d\u0000�Ik�\u0011!��c~p �O&�٦(��\u0011\n)/�dj\u0013<i�\tCE\u000b�x�Z�*k�\u0005^�or\u0016:*i���Xm\u001dQ(a\u0004Y�m�P\u0018�]�B��S3O\u0018��,o�0O��\u0019��%��[��Ii�;Ćf���\b\u0001\u001cֱ K~�\u0006�(Z�������}�91�8�\u0010/>Z'�\u0016nߟ%^jhC48��)\u0006;�t\u0018�51�Jt\u0016�NȋcI\"�\u0001��iu��\u001d{lI���L����_�8ВfL.\u0012�����ƒ����hv���\u000fPK\u0007\b����E\u0001\u0000\u0000�\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0000\u0000\u0000xl/workbook.xml��1N�0\u0014�w$�`���\u0001� �ӥB��P�]���\u001aۑmZN�8\u0000����30p\u001a\"q\f�T)���~����\u0017�\u0007Ӑ\r����M\u0018\u0010��)mW\u001cn\u0017�'�0-������sk�x\u001b8�1�9�A�hD��\u0016mj*獈)�\u0015\r�G�B�\u0018MCO\u0019��Fh\u000b;C�\u000fq���\u0012gN�\u001b�q'�؈�ֆZ�\u0001���\u001bO���]�s\u000e�h\u0002\u0002-���Ӹ\r`\u001f��Qop!�\u001cX���y��\n�\u001c��޺����{z�y�Ȁ�\\+\u000e~�΀\f�<�lp�\u0002:�,\u0001PK\u0007\bm����\u0000\u0000\u0000h\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001a\u0000\u0000\u0000xl/_rels/workbook.xml.rels��Mk�0\f@���}q��\u0018�n/c����\u0000c+qh\"\u0019K�迟���@\u0007;�$��{\u000f��~Γy�\"#���i� \u0005�#\r\u000e^�O7�`D=E?1�\u0003b�n��8y�?$�YLE�8H���Z\t\tg/\rg����^�\f6�p�\u0003�U���r΀%�좃��\u001d��/\u0003�\u0003I�`|�Rˤ��:f����~\f���mF�\u000bv����\u001c�:���ׯ�������p9HB�Sy\u001dݵK~\u0004�\u0018����\u000bPK\u0007\b�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��\\P\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0000\u0000\u0000xl/worksheets/sheet1.xml�U]o�0\u0014}�����\u001b��c�4Ӡ+\u001b\b�(����m�5q�x+?�\u001b�lls��Ŷr�9�����g�]rg\\[�f��)F�i�vU5�)��c�V����I~���\u001a�\u0013Hh�)�z����rk�=�{����uu���6i�w�\\��z�R�eZ�U��|Uզ�\u0018\u0013g�StNPZ�!�We\u000e���㽶��;\\��\b���zavf�\r���5]v�,}\u001e�|s�ʬ�۝�n\u000f���l=\\S�=�Q�J_\u0016'�����/\u0004�e�\u0003U\t�Vͮj��;�]\u0001�/޼���l\u0002+�ZL��\u0003�/]\u0016}���\\�2=\t\u0018�\u0006\f�pX\u0005�0\u0019�D�0?�`\n�\u0002\u0006�<`KNeX\u0005�1��0\u0016�<�#ZK\u0015�`�\u00026\u0015�8��A?&P\u0003��\u0019%1���Z\u001c1�x\u0019�|L�\u00124��\u0001\u0003�\u0004�a||9\u0006�\u0018�U(\u001c}�˱\u001ea4܍j�\u001d߷�##�m89�\u0019���jD�\"�w����Ƹ\b\u001cR���ɞCdY\f�ӈ�X��P\u0013Ŕ�a}\u001e���&\u001dF���>L�p\u000f��\u000f��\u0003p$泡��\u0013}�\u0019�}��|�\u0015�G/�\t�\u0019o�\u0004�$͆�5!�%\u0005%�B\t\f-\u00153� \u0017\u0006\u001f��͇K\u0010�\u0004�/f���g\fKδd*怡4��\u0018��P��������,֭C9�n\u001c�G���\nǆL\u001f�B�/7�K�6U�&��{[�\u0000:�\u0004J��z�\u0013C�\u0016���ag�>D����&��\u001fs�au?M��PK\u0007\b̸��p\u0002\u0000\u0000�\u0007\u0000\u0000PK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\P��z��\u0000\u0000\u0000I\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000_rels/.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\Pz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001c\u0001\u0000\u0000[Content_Types].xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\P6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0002\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\P�_I-\u0005\u0001\u0000\u0000�\u0001\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000i\u0003\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\Ph���y\u0000\u0000\u0000�\u0000\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0004\u0000\u0000xl/sharedStrings.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\P����E\u0001\u0000\u0000�\u0002\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000h\u0005\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\Pm����\u0000\u0000\u0000h\u0001\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0006\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\P�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001b\b\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��\\P̸��p\u0002\u0000\u0000�\u0007\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00007\t\u0000\u0000xl/worksheets/sheet1.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\t\u0000\t\u0000?\u0002\u0000\u0000�\u000b\u0000\u0000\u0000\u0000"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "企业授信管理",
+					"item": [
+						{
+							"name": "分页查询授信额度列表",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "ulMZTrw7IFab7rlwMO_zfgvaeCMQFLamaQGRRg6nEpE"
+									}
+								],
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/credit/line?page=1&size=10&crdtid=EL1905230000007&creditType=COMPLEX&status=APPR&bkid=05",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"credit",
+										"line"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "crdtid",
+											"value": "EL1905230000007"
+										},
+										{
+											"key": "creditType",
+											"value": "COMPLEX"
+										},
+										{
+											"key": "status",
+											"value": "APPR"
+										},
+										{
+											"key": "bkid",
+											"value": "05"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "核心企业授信额度查询",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "ulMZTrw7IFab7rlwMO_zfgvaeCMQFLamaQGRRg6nEpE"
+											}
+										],
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/credit/line?page=1&size=10",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"credit",
+												"line"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2282"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 06 Mar 2020 06:27:15 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"bkid\": \"05\",\n                    \"cavAmt\": 0,\n                    \"crdAmt\": 0,\n                    \"crdtid\": \"EL1905230000007\",\n                    \"createDate\": \"2020-03-06 11:59:50\",\n                    \"creditType\": \"COMPLEX\",\n                    \"cudAmt\": 0,\n                    \"eavAmt\": 0,\n                    \"endDate\": \"2019-07-01 00:00:00\",\n                    \"eudAmt\": 1122,\n                    \"exoAmt\": 50000000,\n                    \"exopType\": \"1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"37928726-0\",\n                    \"hzname\": \"E核心企业_TSCF培训专用\",\n                    \"mbname\": \"凯文\",\n                    \"modifyDate\": \"2020-03-06 12:32:11\",\n                    \"pkid\": \"1235777085028376576\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-05-01 00:00:00\",\n                    \"status\": \"APPR\"\n                },\n                {\n                    \"bizType\": \"03160100\",\n                    \"bkid\": \"05\",\n                    \"cavAmt\": 0,\n                    \"crdAmt\": 0,\n                    \"crdtid\": \"EL1905270000002\",\n                    \"createDate\": \"2020-03-06 11:59:50\",\n                    \"creditType\": \"SINGLE\",\n                    \"cudAmt\": 0,\n                    \"eavAmt\": 34786789.23,\n                    \"endDate\": \"2022-01-28 00:00:00\",\n                    \"eudAmt\": 15213210.77,\n                    \"exoAmt\": 50000000,\n                    \"exopType\": \"1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"37928726-0\",\n                    \"hzname\": \"E核心企业_TSCF培训专用\",\n                    \"mbname\": \"凯文\",\n                    \"modifyDate\": \"2020-03-06 12:32:11\",\n                    \"pkid\": \"1235777082750869504\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-01-11 00:00:00\",\n                    \"status\": \"APPR\"\n                },\n                {\n                    \"bkid\": \"05\",\n                    \"cavAmt\": 0,\n                    \"crdAmt\": 0,\n                    \"crdtid\": \"EL1905270000008\",\n                    \"createDate\": \"2020-03-06 11:59:49\",\n                    \"creditType\": \"COMPLEX\",\n                    \"cudAmt\": 0,\n                    \"eavAmt\": 0,\n                    \"endDate\": \"2019-12-31 00:00:00\",\n                    \"eudAmt\": 4501.21,\n                    \"exoAmt\": 50000000,\n                    \"exopType\": \"1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"37928726-0\",\n                    \"hzname\": \"E核心企业_TSCF培训专用\",\n                    \"mbname\": \"凯文\",\n                    \"modifyDate\": \"2020-03-06 12:32:11\",\n                    \"pkid\": \"1235777081660350464\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-01-01 00:00:00\",\n                    \"status\": \"APPR\"\n                },\n                {\n                    \"bizType\": \"03160100\",\n                    \"bkid\": \"05\",\n                    \"cavAmt\": 0,\n                    \"crdAmt\": 0,\n                    \"crdtid\": \"EL1911110000003\",\n                    \"createDate\": \"2020-03-06 11:59:49\",\n                    \"creditType\": \"SINGLE\",\n                    \"cudAmt\": 0,\n                    \"eavAmt\": 99988888,\n                    \"endDate\": \"2021-03-01 00:00:00\",\n                    \"eudAmt\": 10000,\n                    \"exoAmt\": 99998888,\n                    \"exopType\": \"1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"37928726-0\",\n                    \"hzname\": \"E核心企业_TSCF培训专用\",\n                    \"mbname\": \"凯文\",\n                    \"modifyDate\": \"2020-03-06 12:32:10\",\n                    \"pkid\": \"1235777080242675712\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2018-03-01 00:00:00\",\n                    \"status\": \"APPR\"\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 4,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "额度占用查询",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "cZioYQ0E5OUFxoMx-X_t0AoaCKvsBdR5vkY6WfKzrIw"
+									}
+								],
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/credit/occupy?page=1&size=10&hzname=测试账号&bkid=05",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"credit",
+										"occupy"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "hzname",
+											"value": "测试账号"
+										},
+										{
+											"key": "bkid",
+											"value": "05"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "额度占用查询",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "cZioYQ0E5OUFxoMx-X_t0AoaCKvsBdR5vkY6WfKzrIw"
+											}
+										],
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/credit/occupy?page=1&size=10&hzname=测试账号&bkid=05",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"credit",
+												"occupy"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "hzname",
+													"value": "测试账号"
+												},
+												{
+													"key": "bkid",
+													"value": "05"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "963"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 09:06:04 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"bkid\": \"05\",\n                    \"crdAmt\": 50000000,\n                    \"crdCcy\": \"10\",\n                    \"crdtid\": \"EL1905270000008\",\n                    \"createDate\": \"2020-03-06 18:07:26\",\n                    \"endDate\": \"2019-12-31 00:00:00\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"12345678454546542Q\",\n                    \"hzname\": \"测试账号002\",\n                    \"mbname\": \"凯文买家11\",\n                    \"modifyDate\": \"2020-03-10 16:59:48\",\n                    \"pkid\": \"1235869593842360320\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-01-01 00:00:00\",\n                    \"totleAmt\": 104427,\n                    \"totleSum\": 1\n                },\n                {\n                    \"bkid\": \"05\",\n                    \"crdAmt\": 50000000,\n                    \"crdCcy\": \"10\",\n                    \"crdtid\": \"EL1905270000002\",\n                    \"createDate\": \"2020-03-06 18:07:25\",\n                    \"endDate\": \"2022-01-28 00:00:00\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"12345678454546542Q\",\n                    \"hzname\": \"测试账号002\",\n                    \"mbname\": \"凯文买家11\",\n                    \"modifyDate\": \"2020-03-10 16:59:39\",\n                    \"pkid\": \"1235869590814072832\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-01-11 00:00:00\",\n                    \"totleAmt\": 730989,\n                    \"totleSum\": 7\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 2,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "额度占用明细查询",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "VBQ1A4eI96f1Ye3Twjc9ax0J3uq1ZD7y-1spTf75dXc"
+									}
+								],
+								"url": {
+									"raw": "{{P_URL}}/v1/api/factoring/credit/occupy/mx?page=1&size=10&occupyId=1235869591896203264",
+									"host": [
+										"{{P_URL}}"
+									],
+									"path": [
+										"v1",
+										"api",
+										"factoring",
+										"credit",
+										"occupy",
+										"mx"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "occupyId",
+											"value": "1235869591896203264"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "额度占用明细查询",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "5T8RCYpvu7Yx9RHU-lfGCM0PSQOeuwevNfdsKFSMJVA"
+											}
+										],
+										"url": {
+											"raw": "{{P_URL}}/v1/api/factoring/credit/occupy/mx?page=1&size=10&occupyId=1235869591896203264",
+											"host": [
+												"{{P_URL}}"
+											],
+											"path": [
+												"v1",
+												"api",
+												"factoring",
+												"credit",
+												"occupy",
+												"mx"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "occupyId",
+													"value": "1235869591896203264"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2933"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 06:14:37 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"createDate\": \"2020-03-10 11:27:11\",\n                    \"financeAmt\": 345345.22,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-26 00:00:00\",\n                    \"financeNo\": \"TSCF191480072675\",\n                    \"fphm\": \"7512081308\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:51\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218415692722176\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:11\",\n                    \"financeAmt\": 3142937,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-26 00:00:00\",\n                    \"financeNo\": \"TSCF191480072676\",\n                    \"fphm\": \"7512081309\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:50\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218414522511360\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 469487.34,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-27 00:00:00\",\n                    \"financeNo\": \"TSCF191480072677\",\n                    \"fphm\": \"7512081311\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:49\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218413444575232\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 10000.26,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-20 00:00:00\",\n                    \"financeNo\": \"TSCF191480072670\",\n                    \"fphm\": \"7512081304\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:49\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218412282753024\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 40000,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-24 00:00:00\",\n                    \"financeEndDate\": \"2020-05-19 00:00:00\",\n                    \"financeNo\": \"TSCF191440071955\",\n                    \"fphm\": \"7512081218\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:49\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218411213205504\",\n                    \"status\": \"USED\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 23422.22,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2018-11-10 00:00:00\",\n                    \"financeEndDate\": \"2019-06-27 00:00:00\",\n                    \"financeNo\": \"TSCF191500072937\",\n                    \"fphm\": \"7512081340\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:49\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218410126880768\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:09\",\n                    \"financeAmt\": 10000.55,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2018-11-10 00:00:00\",\n                    \"financeEndDate\": \"2019-06-27 00:00:00\",\n                    \"financeNo\": \"TSCF191500072938\",\n                    \"fphm\": \"7512081338\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:48\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218409053138944\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:09\",\n                    \"financeAmt\": 1111111,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-11-13 00:00:00\",\n                    \"financeNo\": \"TSCF191480072601\",\n                    \"fphm\": \"7512081297\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 14:13:48\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218407895511040\",\n                    \"status\": \"DEFR\"\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 8,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "后台",
+			"item": [
+				{
+					"name": "核心企业管理",
+					"item": [
+						{
+							"name": "分页查询核心企业",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "xPjDpgvKATqi35aDf0ycpcu0-qcZ6NPf7WdRxp-Rkow",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/member?memberType=HY&mbname=凯&hydm=001032&createStartDate=2020-03-10&createEndDate=2020-03-11&shopno=S00100&status=ENABLE",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"member"
+									],
+									"query": [
+										{
+											"key": "memberType",
+											"value": "HY"
+										},
+										{
+											"key": "mbname",
+											"value": "凯"
+										},
+										{
+											"key": "hydm",
+											"value": "001032"
+										},
+										{
+											"key": "createStartDate",
+											"value": "2020-03-10"
+										},
+										{
+											"key": "createEndDate",
+											"value": "2020-03-11"
+										},
+										{
+											"key": "shopno",
+											"value": "S00100"
+										},
+										{
+											"key": "status",
+											"value": "ENABLE"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "分页查询核心企业",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "xPjDpgvKATqi35aDf0ycpcu0-qcZ6NPf7WdRxp-Rkow",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/member?memberType=HY&mbname=凯&hydm=001032&createStartDate=2020-03-10&createEndDate=2020-03-11&shopno=S00100&status=ENABLE",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"member"
+											],
+											"query": [
+												{
+													"key": "memberType",
+													"value": "HY"
+												},
+												{
+													"key": "mbname",
+													"value": "凯"
+												},
+												{
+													"key": "hydm",
+													"value": "001032"
+												},
+												{
+													"key": "createStartDate",
+													"value": "2020-03-10"
+												},
+												{
+													"key": "createEndDate",
+													"value": "2020-03-11"
+												},
+												{
+													"key": "shopno",
+													"value": "S00100"
+												},
+												{
+													"key": "status",
+													"value": "ENABLE"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "489"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 05:46:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"bkid\": \"05\",\n                    \"createDate\": \"2020-03-10 10:52:08\",\n                    \"createDepid\": \"0001\",\n                    \"createDepname\": \"开发部门\",\n                    \"createUserid\": \"0000\",\n                    \"createUsername\": \"系统管理员\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"mbname\": \"凯文买家11\",\n                    \"memberType\": \"HY\",\n                    \"pkid\": \"1237209593678905344\",\n                    \"roles\": \"UP_CUSTOMER\",\n                    \"shopno\": \"S00100\",\n                    \"status\": \"ENABLE\",\n                    \"timemd5\": \"d572bcdcefda48d1b1a849199874c57c\"\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 1,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "保存核心企业",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "w8fbMvCpSzp7NmA1LhcEdxhi0Hxc9yk8G7INN3e0i0Q",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json;charset=UTF-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"bkid\": \"04\",\n    \"shopno\": \"S00100\",\n    \"hydm\": \"001033\",\n    \"mbname\": \"凯文买家12\",\n    \"status\": \"ENABLE\"\n}"
+								},
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/member/core/save",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"member",
+										"core",
+										"save"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "保存核心企业",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "1JgSkSlKFydRyC3BCrxLm5-0PsT3S4z6KxVhmyevmVE",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json;charset=UTF-8",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"bkid\": \"05\",\n    \"shopno\": \"S00000\",\n    \"hydm\": \"001032\",\n    \"mbname\": \"凯文买家11\",\n    \"status\": \"ENABLE\"\n}"
+										},
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/member/core/save",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"member",
+												"core",
+												"save"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "28"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 02:45:00 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "启用/禁用核心企业",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "3419n05tJOiio8SsdvuWBdFjDo_SsQQB_oKadlb3ZiU",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/member/1237209593678905344/updateCoreStatus?timemd5=c9f427bb6c884d5c9426003ec52ef857&status=ENABLE",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"member",
+										"1237209593678905344",
+										"updateCoreStatus"
+									],
+									"query": [
+										{
+											"key": "timemd5",
+											"value": "c9f427bb6c884d5c9426003ec52ef857"
+										},
+										{
+											"key": "status",
+											"value": "ENABLE"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "启用/禁用核心企业",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "3419n05tJOiio8SsdvuWBdFjDo_SsQQB_oKadlb3ZiU",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/member/1237209593678905344/updateCoreStatus?timemd5=d572bcdcefda48d1b1a849199874c57c&status=DISABLE",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"member",
+												"1237209593678905344",
+												"updateCoreStatus"
+											],
+											"query": [
+												{
+													"key": "timemd5",
+													"value": "d572bcdcefda48d1b1a849199874c57c"
+												},
+												{
+													"key": "status",
+													"value": "DISABLE"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "28"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 05:59:11 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "导出(保理)推荐供应商列表",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "D2bUIhRq6qswG7R-PKrLKcKgcRC-xZoospqDQcTBJQk"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/member/export?memberType=HZ&hzname=杭州&hzdm=003141&beginYear=2020&endYear=2021&hydm=001032",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"member",
+										"export"
+									],
+									"query": [
+										{
+											"key": "memberType",
+											"value": "HZ"
+										},
+										{
+											"key": "hzname",
+											"value": "杭州"
+										},
+										{
+											"key": "hzdm",
+											"value": "003141"
+										},
+										{
+											"key": "beginYear",
+											"value": "2020"
+										},
+										{
+											"key": "endYear",
+											"value": "2021"
+										},
+										{
+											"key": "hydm",
+											"value": "001032"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "导出(保理)推荐供应商列表",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "D2bUIhRq6qswG7R-PKrLKcKgcRC-xZoospqDQcTBJQk"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/member/export?memberType=HZ&hzname=杭州&hzdm=003141&beginYear=2020&endYear=2021&hydm=001032",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"member",
+												"export"
+											],
+											"query": [
+												{
+													"key": "memberType",
+													"value": "HZ"
+												},
+												{
+													"key": "hzname",
+													"value": "杭州"
+												},
+												{
+													"key": "hzdm",
+													"value": "003141"
+												},
+												{
+													"key": "beginYear",
+													"value": "2020"
+												},
+												{
+													"key": "endYear",
+													"value": "2021"
+												},
+												{
+													"key": "hydm",
+													"value": "001032"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "raw",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment;filename=ä¾åºååè¡¨.xlsx"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.ms-excel;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 10:07:24 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0000\u0000_rels/.rels���j�0\f�_���8�`�Q��2�m��\u00014[ILb��ږ���.[K\n\u001b�($}�\u0007�v?�I�Q.���uӂ�h���\u001bx>=��@\u0015��p�H\u0006\"�~�}�\t�n����*\"\u0016\u0003�H�׺؁\u0002��\u0013���8\u0007�Z�^'�#��7m{��O\u0006�3��\u0019�G�\u0006u�ܓ\u0018�'��y|a\u001e�����D�\t��\u000el_\u0003EYȾ�\u0000���vql\u001f3�ML�eh\u0016���*�\u0004��\\3�Y0���oJ׏�\u0003\t:\u0014��^\b�\u001f�}\u0002PK\u0007\b��z��\u0000\u0000\u0000I\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0013\u0000\u0000\u0000[Content_Types].xml�S�n�0\u0010����*6�PU\u0015�C\u001f�\u0016��\u0003\\{�X�%����]\u00078�R�\nq�cfgfW�d�q�ZCB\u0013|��|�*�*h㻆},^�{Va�^K\u001b<4�\u00076�N\u0016�\bXQ�ǆ�9�\u0007!P��$�\u0010�\u0013҆�d�c�D�j);\u0010��ѝP�g��E�M'O�ʕ����H7L�h���R���G��^�'�\u0003\u0007{\u0013�\b�zސʮ\u001bB��3\u001c�\u000b˙��h.�h�W�жF�\u000ej娄CQՠ똈���}ιL�U:\u0012\u0014D�\u0013����%އ����,�B���[�\t��\u001e ;˱�\t�{N��~��X�p�\u001cykOL�\u0004\u0018�kN�V��ܿBZ~����q\u0018��\u000f �a\u0019\u001fr��{O�\u0001PK\u0007\bz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0000docProps/app.xmlM��\n�0\u0010D��\u0010ro�z\u0010�4� �'{�\u000f\b��\u0006�MHV�盓z�\u0019��T��E�1e\u0017�����\u0002Ɇ�ѳ����:�No7jH!bb�Y�\u0007�V���\u0004�����T�)$o���0M��9ؗGb�7�\u0001pe�\u0011�*~�R�>��Y�EB��\u0014�\u0018nW\u0005������\u0000PK\u0007\b6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0011\u0000\u0000\u0000docProps/core.xmlm��J�0\u0010F_�依�\u0015��v\u0011eAP\\pE�.$c[l~H�]�޴�\u0015Ի$ߙ��7\u0007=f���`MCXAI�FZ5��!\u000f�m~N�\u0010�Qb�\u0006\u001bb,ٴ�t\\Z�;o\u001d�8`Ȓ�\u0004.]C�\u0018\u001d\u0007\b�G-B�\b��\u0017뵈��;pB��\u000e���\u00144F�D\u00140\u000bs�\u001a�Q��to~\\\u0004J\u0002����\u0000�`��F�:�;�$+y\b�JM�TL�¥�\u0018<���/�烙�.���QͥG\u0011QeI��K�|'����~Kڒ�4�U��QN�xy�\\ï�Y�u���H�����gn}��O��'PK\u0007\b>\u0004�V\u0004\u0001\u0000\u0000�\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000xl/sharedStrings.xml=�A\n�0\u0010\u0000�\b{��\u001eD�i\u000f�/�\u0007�tm\u0002�&f7�����0Ì�7mꃕc&\u000b���B�y��Zx>�\u000b��~72��X�I��nx�s�\u0010[\b\"�5����\u000bR7�\\���u�\\*��\u0003��M��9��\"��~PK\u0007\bh���y\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\r\u0000\u0000\u0000xl/styles.xml���n� \u0010��J}\u0007���d���&C%W��J]�9ۨpX@\"�O_0N�L\u001d:����\u001f���n4���ye���UA\t`c�®�\u001f��iKw���aҰ�\u0001\u0002�\u000e�\u0015�C\u0018^\u0018�M\u000fF��\u001d\u0000�Ik�\u0011!��c~p �O&�٦(��\u0011\n)/�dj\u0013<i�\tCE\u000b�x�Z�*k�\u0005^�or\u0016:*i���Xm\u001dQ(a\u0004Y�m�P\u0018�]�B��S3O\u0018��,o�0O��\u0019��%��[��Ii�;Ćf���\b\u0001\u001cֱ K~�\u0006�(Z�������}�91�8�\u0010/>Z'�\u0016nߟ%^jhC48��)\u0006;�t\u0018�51�Jt\u0016�NȋcI\"�\u0001��iu��\u001d{lI���L����_�8ВfL.\u0012�����ƒ����hv���\u000fPK\u0007\b����E\u0001\u0000\u0000�\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0000\u0000\u0000xl/workbook.xml��1N�0\u0014�w$�`���\u0001� �ӥB��P�]���\u001aۑmZN�8\u0000����30p\u001a\"q\f�T)���~����\u0017�\u0007Ӑ\r����M\u0018\u0010��)mW\u001cn\u0017�'�0-������sk�x\u001b8�1�9�A�hD��\u0016mj*獈)�\u0015\r�G�B�\u0018MCO\u0019��Fh\u000b;C�\u000fq���\u0012gN�\u001b�q'�؈�ֆZ�\u0001���\u001bO���]�s\u000e�h\u0002\u0002-���Ӹ\r`\u001f��Qop!�\u001cX���y��\n�\u001c��޺����{z�y�Ȁ�\\+\u000e~�΀\f�<�lp�\u0002:�,\u0001PK\u0007\bm����\u0000\u0000\u0000h\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001a\u0000\u0000\u0000xl/_rels/workbook.xml.rels��Mk�0\f@���}q��\u0018�n/c����\u0000c+qh\"\u0019K�迟���@\u0007;�$��{\u000f��~Γy�\"#���i� \u0005�#\r\u000e^�O7�`D=E?1�\u0003b�n��8y�?$�YLE�8H���Z\t\tg/\rg����^�\f6�p�\u0003�U���r΀%�좃��\u001d��/\u0003�\u0003I�`|�Rˤ��:f����~\f���mF�\u000bv����\u001c�:���ׯ�������p9HB�Sy\u001dݵK~\u0004�\u0018����\u000bPK\u0007\b�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000�jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0000\u0000\u0000xl/worksheets/sheet1.xml�U�n�0\u0010}��?DA����f��JK/�\"D\u0001��t׻\u001bu\u0013�\u001c���L�m%��O�\u0015�9g�s2���z\u001b�1��l3��1�#�,�j���珋�*>)�\u001c�{��ۍ1>�����\u001b�w\u001f��]lL]��vg\u001a����.=\u001c�:iwΔK\f��\t#$M�j�\"_V�i:�ș�<>�qR�x�We���}���Y{�\u001d���\u0018�����l��\u001b8{�`����\u000b���EK�*\u001f����_�j�񐦄<\u000f��/����}��S\f�E�\u0003U\u0011ܭ�m՘[�@w\u0005ؾx��\tF�\u0019�Th9�\u0013\u000f�ݷdQ��\u001f'b\t��\f1(C\f�\t��v��2��0Ϧ0�\u001c04b\u0012\n�\u0000�d����'��P�E�@��`)���\u0010֧q,�\u0004�J�N\u0015�F��=�{���u�/���dȡ\u0011\u0003��\ba\\�\u001e�\u0013Bp��\u0004��j�G8�\u001c�V��}��b=\u0005\u001d��¹^O`�L�.6S*�&�'b���'M{��\u0012�Yq�BX_&�\u000e\u0018BR9�\"���⅞N�pO�cO�c#t4䳱�ط\u0019�)H�/���}'P�������\u0007��\\\u001d�_\t1x<��1n\u0002/,Bj�'�J>�Q��\u0001W�w�\\(pF�ucX�\u0016'���Sv����Y�5�q%����Ce���딫�e� yBE��(ڋ6\u0018�\r��\u0004\u000f�\u0019�Bj��)�\u0012�u8�CɱU��Ԍ�`�'O�&ߕksS�uմѝ���0؎3\u0019G+k�q݉��\u0006���akV\u001eoő�\u0018��\r��\u0010|���?PK\u0007\b���d�\u0002\u0000\u0000�\u0007\u0000\u0000PK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jP��z��\u0000\u0000\u0000I\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000_rels/.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jPz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001c\u0001\u0000\u0000[Content_Types].xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jP6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0002\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jP>\u0004�V\u0004\u0001\u0000\u0000�\u0001\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000i\u0003\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jPh���y\u0000\u0000\u0000�\u0000\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0004\u0000\u0000xl/sharedStrings.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jP����E\u0001\u0000\u0000�\u0002\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000g\u0005\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jPm����\u0000\u0000\u0000h\u0001\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0006\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jP�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001a\b\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000�jP���d�\u0002\u0000\u0000�\u0007\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00006\t\u0000\u0000xl/worksheets/sheet1.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\t\u0000\t\u0000?\u0002\u0000\u0000\u000e\f\u0000\u0000\u0000\u0000"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "供应商管理",
+					"item": [
+						{
+							"name": "分页查询供应商列表",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "xPjDpgvKATqi35aDf0ycpcu0-qcZ6NPf7WdRxp-Rkow"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/member?memberType=HZ&hzname=杭州&hzdm=003141&beginYear=2020&endYear=2021&hydm=001032",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"member"
+									],
+									"query": [
+										{
+											"key": "memberType",
+											"value": "HZ"
+										},
+										{
+											"key": "hzname",
+											"value": "杭州"
+										},
+										{
+											"key": "hzdm",
+											"value": "003141"
+										},
+										{
+											"key": "beginYear",
+											"value": "2020"
+										},
+										{
+											"key": "endYear",
+											"value": "2021"
+										},
+										{
+											"key": "hydm",
+											"value": "001032"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "分页查询供应商列表",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "xPjDpgvKATqi35aDf0ycpcu0-qcZ6NPf7WdRxp-Rkow"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/member?memberType=HZ&hzname=杭州&hzdm=003141&beginYear=2020&endYear=2021&hydm=001032",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"member"
+											],
+											"query": [
+												{
+													"key": "memberType",
+													"value": "HZ"
+												},
+												{
+													"key": "hzname",
+													"value": "杭州"
+												},
+												{
+													"key": "hzdm",
+													"value": "003141"
+												},
+												{
+													"key": "beginYear",
+													"value": "2020"
+												},
+												{
+													"key": "endYear",
+													"value": "2021"
+												},
+												{
+													"key": "hydm",
+													"value": "001032"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "703"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 06:03:07 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"bkid\": \"05\",\n                    \"createDate\": \"2020-03-10 11:55:25\",\n                    \"createDepid\": \"001032A0\",\n                    \"createDepname\": \"凯文贸易卖家公司\",\n                    \"createUserid\": \"kaiwen11\",\n                    \"createUsername\": \"凯文贸易卖家公司管理员1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"91330104MA2AYGEC6N\",\n                    \"hzdm\": \"003141\",\n                    \"hzname\": \"杭州慧康食品有限公司\",\n                    \"lxr\": \"联系人\",\n                    \"lxtel\": \"17306439638\",\n                    \"mbname\": \"凯文贸易卖家11\",\n                    \"memberType\": \"HZ\",\n                    \"pkid\": \"1237225519895736320\",\n                    \"remark\": \"备注\",\n                    \"roles\": \"UP_CUSTOMER\",\n                    \"shopno\": \"S00000\",\n                    \"status\": \"HAS_SEND\",\n                    \"timemd5\": \"db9d72f2082049a4be2a4173352fc28c\",\n                    \"years\": \"2021\"\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 1,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "导出(保理)核心企业列表",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "D2bUIhRq6qswG7R-PKrLKcKgcRC-xZoospqDQcTBJQk"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/member/export?memberType=HY&mbname=凯&hydm=001032&createStartDate=2020-03-10&createEndDate=2020-03-11&shopno=S00100&status=ENABLE",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"member",
+										"export"
+									],
+									"query": [
+										{
+											"key": "memberType",
+											"value": "HY"
+										},
+										{
+											"key": "mbname",
+											"value": "凯"
+										},
+										{
+											"key": "hydm",
+											"value": "001032"
+										},
+										{
+											"key": "createStartDate",
+											"value": "2020-03-10"
+										},
+										{
+											"key": "createEndDate",
+											"value": "2020-03-11"
+										},
+										{
+											"key": "shopno",
+											"value": "S00100"
+										},
+										{
+											"key": "status",
+											"value": "ENABLE"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "导出(保理)核心企业列表",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "D2bUIhRq6qswG7R-PKrLKcKgcRC-xZoospqDQcTBJQk"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/member/export?memberType=HY&mbname=凯&hydm=001032&createStartDate=2020-03-10&createEndDate=2020-03-11&shopno=S00100&status=ENABLE",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"member",
+												"export"
+											],
+											"query": [
+												{
+													"key": "memberType",
+													"value": "HY"
+												},
+												{
+													"key": "mbname",
+													"value": "凯"
+												},
+												{
+													"key": "hydm",
+													"value": "001032"
+												},
+												{
+													"key": "createStartDate",
+													"value": "2020-03-10"
+												},
+												{
+													"key": "createEndDate",
+													"value": "2020-03-11"
+												},
+												{
+													"key": "shopno",
+													"value": "S00100"
+												},
+												{
+													"key": "status",
+													"value": "ENABLE"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "raw",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment;filename=æ ¸å¿ä¼ä¸åè¡¨.xlsx"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/vnd.ms-excel;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 10:04:28 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0000\u0000_rels/.rels���j�0\f�_���8�`�Q��2�m��\u00014[ILb��ږ���.[K\n\u001b�($}�\u0007�v?�I�Q.���uӂ�h���\u001bx>=��@\u0015��p�H\u0006\"�~�}�\t�n����*\"\u0016\u0003�H�׺؁\u0002��\u0013���8\u0007�Z�^'�#��7m{��O\u0006�3��\u0019�G�\u0006u�ܓ\u0018�'��y|a\u001e�����D�\t��\u000el_\u0003EYȾ�\u0000���vql\u001f3�ML�eh\u0016���*�\u0004��\\3�Y0���oJ׏�\u0003\t:\u0014��^\b�\u001f�}\u0002PK\u0007\b��z��\u0000\u0000\u0000I\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0013\u0000\u0000\u0000[Content_Types].xml�S�n�0\u0010����*6�PU\u0015�C\u001f�\u0016��\u0003\\{�X�%����]\u00078�R�\nq�cfgfW�d�q�ZCB\u0013|��|�*�*h㻆},^�{Va�^K\u001b<4�\u00076�N\u0016�\bXQ�ǆ�9�\u0007!P��$�\u0010�\u0013҆�d�c�D�j);\u0010��ѝP�g��E�M'O�ʕ����H7L�h���R���G��^�'�\u0003\u0007{\u0013�\b�zސʮ\u001bB��3\u001c�\u000b˙��h.�h�W�жF�\u000ej娄CQՠ똈���}ιL�U:\u0012\u0014D�\u0013����%އ����,�B���[�\t��\u001e ;˱�\t�{N��~��X�p�\u001cykOL�\u0004\u0018�kN�V��ܿBZ~����q\u0018��\u000f �a\u0019\u001fr��{O�\u0001PK\u0007\bz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0000docProps/app.xmlM��\n�0\u0010D��\u0010ro�z\u0010�4� �'{�\u000f\b��\u0006�MHV�盓z�\u0019��T��E�1e\u0017�����\u0002Ɇ�ѳ����:�No7jH!bb�Y�\u0007�V���\u0004�����T�)$o���0M��9ؗGb�7�\u0001pe�\u0011�*~�R�>��Y�EB��\u0014�\u0018nW\u0005������\u0000PK\u0007\b6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0011\u0000\u0000\u0000docProps/core.xmlm��J�0\u0010F_%依�]DB�E�\u0005Aq�\u0015Ż��m��!�v}{ӺVP�|g\u000e���\u001e�H�ч���\u00169�\u0004��j0]C\u001f\u000e�윒\u0010�Qb�\u0006\u001bj,ݶ�t\\Z�{o\u001d�8` Ic\u0002���}��\u0003\u0004٣\u0016!O�I��Z�t�\u001d8!_E�P2v\u0006\u001a�P\"\n���[���TrU�7?.\u0002%\u0001G�hb�\"/����u�w`IV�\u0018����)���K\u001b\u0015�t{s�,�\rf��D��'5�\u001eEDE���\u000f�\u001a�N\u001e�˫Î�%+Yƪ�`��q���湆_���l}{�\n���gn}��O��'PK\u0007\b\u00108.�\u0004\u0001\u0000\u0000�\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000xl/sharedStrings.xml=�A\n�0\u0010\u0000�\b{��\u001eD�i\u000f�/�\u0007�tm\u0002�&f7�����0Ì�7mꃕc&\u000b���B�y��Zx>�\u000b��~72��X�I��nx�s�\u0010[\b\"�5����\u000bR7�\\���u�\\*��\u0003��M��9��\"��~PK\u0007\bh���y\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\r\u0000\u0000\u0000xl/styles.xml���n� \u0010��J}\u0007���d���&C%W��J]�9ۨpX@\"�O_0N�L\u001d:����\u001f���n4���ye���UA\t`c�®�\u001f��iKw���aҰ�\u0001\u0002�\u000e�\u0015�C\u0018^\u0018�M\u000fF��\u001d\u0000�Ik�\u0011!��c~p �O&�٦(��\u0011\n)/�dj\u0013<i�\tCE\u000b�x�Z�*k�\u0005^�or\u0016:*i���Xm\u001dQ(a\u0004Y�m�P\u0018�]�B��S3O\u0018��,o�0O��\u0019��%��[��Ii�;Ćf���\b\u0001\u001cֱ K~�\u0006�(Z�������}�91�8�\u0010/>Z'�\u0016nߟ%^jhC48��)\u0006;�t\u0018�51�Jt\u0016�NȋcI\"�\u0001��iu��\u001d{lI���L����_�8ВfL.\u0012�����ƒ����hv���\u000fPK\u0007\b����E\u0001\u0000\u0000�\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0000\u0000\u0000xl/workbook.xml���N�0\u0014Ew$��z;�\u0003\bA\u0014�\u000bB��P�]���\u001aۑmZV��\u001f 1��'t@�gZ���I\u0015`dz��G��b|o\u001a�D\u001f��\u001c�\u0011\u0003�V:�������\u001c���A�r~1snA\u0012o\u0003�:�6�4�\u001a�\b#עMM�\u00111E?���(T�\u0011�i�1cg�\bmao��\u001c����K'�\fڸ�xlDLkC��\u0000�ϲkO���]�S\u000e�h\u0002\u0002-���ո\n�`\u0017��Q/q*f\u001cX��?`�y��\n�\u001c�^�������f��}z޽�g@|�\u0015\u0007?Q'@zx�b��\u0006\u0007\u001d���PK\u0007\b����\u0000\u0000\u0000k\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001a\u0000\u0000\u0000xl/_rels/workbook.xml.rels��Mk�0\f@���}q��\u0018�n/c����\u0000c+qh\"\u0019K�迟���@\u0007;�$��{\u000f��~Γy�\"#���i� \u0005�#\r\u000e^�O7�`D=E?1�\u0003b�n��8y�?$�YLE�8H���Z\t\tg/\rg����^�\f6�p�\u0003�U���r΀%�좃��\u001d��/\u0003�\u0003I�`|�Rˤ��:f����~\f���mF�\u000bv����\u001c�:���ׯ�������p9HB�Sy\u001dݵK~\u0004�\u0018����\u000bPK\u0007\b�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000��jP\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0000\u0000\u0000xl/worksheets/sheet1.xml��]o�0\u0014��'�\u001f� q���3��f��n�@B\f��Z���ĕ�Q~�lgl\u0003�\b��#�}|��\u001b�<����\u000fm��t�\f�B�t�2��.�o_�3��WoNʣ���Nk����\u0017�ι�Y����n���\u001ct�W6ƶ�������z\u001dE�>'\u0000\"o�˪rݴ�\u000b'\"�7��=��\u001b�7�ؿ��p�1�!�Y/2����n�^�����\u000f:���˘�g��zS?��\u0017s���v�|����������Ii�\u0011Y����*�|V��m�}��[g}ލg���[�\b\u0014s?b���̝??��j�~��\n!!h\u0019�<�@H\u0018�R�E&ǁM1�\"ž�`\u0003�00\u0014�l�\u0002�BAp�u9���E\u0006\u0015L\u0004��J����S���,JX��\u001a���\u0001��W�\u0002ca��;����Sy3�\u001bS0\"��\u0001R��\t\u0016���^Q\u001c{#0�x\u0017T�\u0014��X��\u0010Ӥ�n&X�\n1x�(�����/v&/v&#8�����p�����J��\u0001�����s��]��\u0000�\u0011Hʗc�� ����\u0014�PD\u0016D�R��D��>}�B�9��o�I����\u0018˻\u001cf@g\u0018\u0010�3N�@��3�\n\u00164�\u001bhLIb\u001e[��'���\u0004�K�󧖴N��,��z�?�v�t=�3Ι�?��\u0005���\u0018�m�h�v��\u000e�z��\f�Ὅsg\u000eO��\\?�O�GPK\u0007\b88D]Q\u0002\u0000\u0000�\u0006\u0000\u0000PK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jP��z��\u0000\u0000\u0000I\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000_rels/.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jPz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001c\u0001\u0000\u0000[Content_Types].xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jP6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0002\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jP\u00108.�\u0004\u0001\u0000\u0000�\u0001\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000i\u0003\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jPh���y\u0000\u0000\u0000�\u0000\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0004\u0000\u0000xl/sharedStrings.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jP����E\u0001\u0000\u0000�\u0002\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000g\u0005\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jP����\u0000\u0000\u0000k\u0001\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0006\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jP�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001d\b\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000��jP88D]Q\u0002\u0000\u0000�\u0006\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00009\t\u0000\u0000xl/worksheets/sheet1.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\t\u0000\t\u0000?\u0002\u0000\u0000�\u000b\u0000\u0000\u0000\u0000"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "企业授信管理",
+					"item": [
+						{
+							"name": "额度占用查询",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "yY6yEtJIDFrE1wDWmJBblmIj16i_uo-dow7IHeGkMuo"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/credit/occupy?page=1&size=10&bkid=05&shopno=S00000&hzname=测试",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"credit",
+										"occupy"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "bkid",
+											"value": "05"
+										},
+										{
+											"key": "shopno",
+											"value": "S00000"
+										},
+										{
+											"key": "hzname",
+											"value": "测试"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "额度占用查询",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "yY6yEtJIDFrE1wDWmJBblmIj16i_uo-dow7IHeGkMuo"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/credit/occupy?page=1&size=10&bkid=05&shopno=S00000&hzname=测试",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"credit",
+												"occupy"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "bkid",
+													"value": "05"
+												},
+												{
+													"key": "shopno",
+													"value": "S00000"
+												},
+												{
+													"key": "hzname",
+													"value": "测试"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "963"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 08:20:41 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"bkid\": \"05\",\n                    \"crdAmt\": 50000000,\n                    \"crdCcy\": \"10\",\n                    \"crdtid\": \"EL1905270000008\",\n                    \"createDate\": \"2020-03-06 18:07:26\",\n                    \"endDate\": \"2019-12-31 00:00:00\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"12345678454546542Q\",\n                    \"hzname\": \"测试账号002\",\n                    \"mbname\": \"凯文买家11\",\n                    \"modifyDate\": \"2020-03-10 16:19:48\",\n                    \"pkid\": \"1235869593842360320\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-01-01 00:00:00\",\n                    \"totleAmt\": 104427,\n                    \"totleSum\": 1\n                },\n                {\n                    \"bkid\": \"05\",\n                    \"crdAmt\": 50000000,\n                    \"crdCcy\": \"10\",\n                    \"crdtid\": \"EL1905270000002\",\n                    \"createDate\": \"2020-03-06 18:07:25\",\n                    \"endDate\": \"2022-01-28 00:00:00\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"hzCreditCode\": \"12345678454546542Q\",\n                    \"hzname\": \"测试账号002\",\n                    \"mbname\": \"凯文买家11\",\n                    \"modifyDate\": \"2020-03-10 16:19:40\",\n                    \"pkid\": \"1235869590814072832\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-01-11 00:00:00\",\n                    \"totleAmt\": 730989,\n                    \"totleSum\": 7\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 2,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "额度占用明细查询",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "3m2spnWSjudmi_HaUxyMrlylNdO0NylV3DlqQ9FVRe4"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/credit/occupy/mx?page=1&size=10&occupyId=1235869591896203264",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"credit",
+										"occupy",
+										"mx"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "occupyId",
+											"value": "1235869591896203264"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "额度占用明细查询",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "3m2spnWSjudmi_HaUxyMrlylNdO0NylV3DlqQ9FVRe4"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/credit/occupy/mx?page=1&size=10&occupyId=1235869591896203264",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"credit",
+												"occupy",
+												"mx"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "occupyId",
+													"value": "1235869591896203264"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2933"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 08:29:34 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"createDate\": \"2020-03-10 11:27:11\",\n                    \"financeAmt\": 345345.22,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-26 00:00:00\",\n                    \"financeNo\": \"TSCF191480072675\",\n                    \"fphm\": \"7512081308\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:45\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218415692722176\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:11\",\n                    \"financeAmt\": 3142937,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-26 00:00:00\",\n                    \"financeNo\": \"TSCF191480072676\",\n                    \"fphm\": \"7512081309\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:45\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218414522511360\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 469487.34,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-27 00:00:00\",\n                    \"financeNo\": \"TSCF191480072677\",\n                    \"fphm\": \"7512081311\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:44\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218413444575232\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 10000.26,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-06-20 00:00:00\",\n                    \"financeNo\": \"TSCF191480072670\",\n                    \"fphm\": \"7512081304\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:44\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218412282753024\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 40000,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-24 00:00:00\",\n                    \"financeEndDate\": \"2020-05-19 00:00:00\",\n                    \"financeNo\": \"TSCF191440071955\",\n                    \"fphm\": \"7512081218\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:44\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218411213205504\",\n                    \"status\": \"USED\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:10\",\n                    \"financeAmt\": 23422.22,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2018-11-10 00:00:00\",\n                    \"financeEndDate\": \"2019-06-27 00:00:00\",\n                    \"financeNo\": \"TSCF191500072937\",\n                    \"fphm\": \"7512081340\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:44\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218410126880768\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:09\",\n                    \"financeAmt\": 10000.55,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2018-11-10 00:00:00\",\n                    \"financeEndDate\": \"2019-06-27 00:00:00\",\n                    \"financeNo\": \"TSCF191500072938\",\n                    \"fphm\": \"7512081338\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:43\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218409053138944\",\n                    \"status\": \"DEFR\"\n                },\n                {\n                    \"createDate\": \"2020-03-10 11:27:09\",\n                    \"financeAmt\": 1111111,\n                    \"financeBal\": 104427,\n                    \"financeDate\": \"2019-05-28 00:00:00\",\n                    \"financeEndDate\": \"2019-11-13 00:00:00\",\n                    \"financeNo\": \"TSCF191480072601\",\n                    \"fphm\": \"7512081297\",\n                    \"freeAmt\": 0,\n                    \"freeRate\": 0,\n                    \"modifyDate\": \"2020-03-10 16:19:43\",\n                    \"occupyId\": \"1235869591896203264\",\n                    \"pkid\": \"1237218407895511040\",\n                    \"status\": \"DEFR\"\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 8,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						},
+						{
+							"name": "核心企业授信额度查询",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "aPHdaDb-vTnXHCM-AfEnhOXRj_80iAV2fEO-1M6fk-w"
+									}
+								],
+								"url": {
+									"raw": "{{M_URL}}/v1/factoring/credit/line?page=1&size=10&crdtid=EL1905230000007&creditType=COMPLEX&status=APPR&bkid=05&shopno=S00000",
+									"host": [
+										"{{M_URL}}"
+									],
+									"path": [
+										"v1",
+										"factoring",
+										"credit",
+										"line"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "crdtid",
+											"value": "EL1905230000007"
+										},
+										{
+											"key": "creditType",
+											"value": "COMPLEX"
+										},
+										{
+											"key": "status",
+											"value": "APPR"
+										},
+										{
+											"key": "bkid",
+											"value": "05"
+										},
+										{
+											"key": "shopno",
+											"value": "S00000"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "核心企业授信额度查询",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "aPHdaDb-vTnXHCM-AfEnhOXRj_80iAV2fEO-1M6fk-w"
+											}
+										],
+										"url": {
+											"raw": "{{M_URL}}/v1/factoring/credit/line?page=1&size=10&crdtid=EL1905230000007&creditType=COMPLEX&status=APPR&bkid=05&shopno=S00000",
+											"host": [
+												"{{M_URL}}"
+											],
+											"path": [
+												"v1",
+												"factoring",
+												"credit",
+												"line"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "crdtid",
+													"value": "EL1905230000007"
+												},
+												{
+													"key": "creditType",
+													"value": "COMPLEX"
+												},
+												{
+													"key": "status",
+													"value": "APPR"
+												},
+												{
+													"key": "bkid",
+													"value": "05"
+												},
+												{
+													"key": "shopno",
+													"value": "S00000"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-MaxValidator-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "3600"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "553"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 10 Mar 2020 08:34:16 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"data\": {\n            \"currPage\": 1,\n            \"list\": [\n                {\n                    \"bkid\": \"05\",\n                    \"cavAmt\": 0,\n                    \"crdAmt\": 0,\n                    \"crdtid\": \"EL1905230000007\",\n                    \"createDate\": \"2020-03-10 11:40:57\",\n                    \"creditType\": \"COMPLEX\",\n                    \"cudAmt\": 0,\n                    \"eavAmt\": 0,\n                    \"endDate\": \"2019-07-01 00:00:00\",\n                    \"eudAmt\": 1122,\n                    \"exoAmt\": 50000000,\n                    \"exopType\": \"1\",\n                    \"hyCreditCode\": \"37928726-0\",\n                    \"hydm\": \"001032\",\n                    \"mbname\": \"凯文买家11\",\n                    \"modifyDate\": \"2020-03-10 16:29:21\",\n                    \"pkid\": \"1237221880150024192\",\n                    \"shopno\": \"S00000\",\n                    \"startDate\": \"2017-05-01 00:00:00\",\n                    \"status\": \"APPR\"\n                }\n            ],\n            \"pageSize\": 10,\n            \"totalCount\": 1,\n            \"totalPage\": 1\n        }\n    },\n    \"msg\": \"SUCCESS\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
